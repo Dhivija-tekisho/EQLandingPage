@@ -1,0 +1,5 @@
+{
+  "name": "EmailQ - AI-Powered Email Orchestration",
+  "description": "EmailQ is an AI-powered email orchestration platform that automatically classifies emails, generates reply drafts, and manages your inbox with RAG-based intelligence.",
+  "requestFramePermissions": []
+}
