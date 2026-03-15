@@ -26,7 +26,7 @@ export default function Problem() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">Email was built for a different era. <span className="text-white/40">EmailQ brings it into the AI era</span></h2>
-          <p className="text-white/60 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Traditional inboxes are passive lists of messages. EmailQ turns your inbox into an active orchestration engine.
           </p>
         </div>
@@ -45,7 +45,7 @@ export default function Problem() {
                 {problem.icon}
               </div>
               <h3 className="text-xl font-bold mb-4">{problem.title}</h3>
-              <p className="text-white/50 leading-relaxed">{problem.description}</p>
+              <p className="text-gray-400 leading-relaxed">{problem.description}</p>
             </motion.div>
           ))}
         </div>

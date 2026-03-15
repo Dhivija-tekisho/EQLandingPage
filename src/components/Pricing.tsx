@@ -62,7 +62,7 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">Available Plans</h2>
-          <p className="text-white/60 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Choose the perfect plan for your email orchestration needs.
           </p>
         </div>
@@ -75,10 +75,10 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`glass-card p-8 flex flex-col ${plan.current ? 'border-indigo-500/50 ring-1 ring-indigo-500/50' : ''}`}
+              className={`glass-card p-8 flex flex-col ${plan.current ? 'border-[#6366f1]/50 ring-1 ring-[#6366f1]/50' : ''}`}
             >
               {plan.current && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-indigo-600 text-[10px] font-bold uppercase tracking-widest rounded-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-[#6366f1] text-[10px] font-bold uppercase tracking-widest rounded-full">
                   Current
                 </div>
               )}
@@ -95,8 +95,8 @@ export default function Pricing() {
 
               <ul className="space-y-4 mb-8 flex-grow">
                 {plan.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm text-white/60">
-                    <Check className="w-4 h-4 text-indigo-400 shrink-0" />
+                  <li key={i} className="flex items-center gap-3 text-sm text-gray-400">
+                    <Check className="w-4 h-4 text-[#6366f1] shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -106,7 +106,7 @@ export default function Pricing() {
                 className={`w-full py-3 rounded-lg font-semibold transition-all duration-200 ${
                   plan.current 
                     ? 'bg-white/5 text-white/40 cursor-default' 
-                    : 'bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-500/20'
+                    : 'bg-[#6366f1] hover:bg-[#7c3aed] text-white shadow-lg shadow-[#6366f1]/30'
                 }`}
               >
                 {plan.buttonText}

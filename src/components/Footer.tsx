@@ -9,17 +9,17 @@ const XIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0F0A1E] border-t border-white/10 pt-20 pb-10">
+    <footer className="bg-[#0a0e27] border-t border-white/10 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-[#6366f1] rounded-lg flex items-center justify-center">
                 <Mail className="text-white w-5 h-5" />
               </div>
               <span className="text-xl font-bold tracking-tight font-display">EmailQ</span>
             </div>
-            <p className="text-white/50 max-w-sm mb-8 leading-relaxed">
+            <p className="text-gray-400 max-w-sm mb-8 leading-relaxed">
               The AI-powered email orchestration platform for modern teams. Reclaim your focus and let AI handle the noise.
             </p>
             <div className="flex gap-4">
@@ -50,7 +50,7 @@ export default function Footer() {
             <h4 className="font-bold mb-6">Get in touch</h4>
             <div className="flex flex-col gap-10">
               <div>
-                <h5 className="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em] mb-4">USA Office</h5>
+                <h5 className="text-xs font-bold text-[#6366f1] uppercase tracking-[0.2em] mb-4">USA Office</h5>
                 <div className="text-sm text-white/50 space-y-1">
                   <p className="font-semibold text-white/80 mb-2">Tekisho Infotech Inc.</p>
                   <p>5005 W Royal Ln, Suite 288,</p>
@@ -58,7 +58,7 @@ export default function Footer() {
                 </div>
               </div>
               <div>
-                <h5 className="text-xs font-bold text-indigo-400 uppercase tracking-[0.2em] mb-4">India Office</h5>
+                <h5 className="text-xs font-bold text-[#6366f1] uppercase tracking-[0.2em] mb-4">India Office</h5>
                 <div className="text-sm text-white/50 space-y-1">
                   <p className="font-semibold text-white/80 mb-2">Tekisho Infotech Pvt. Ltd.</p>
                   <p>505 A, 5th Floor, Techno 1,</p>
@@ -78,7 +78,7 @@ export default function Footer() {
               </div>
               <div className="space-y-2">
                 <p className="text-white/30 text-[10px] uppercase font-bold tracking-wider">Email</p>
-                <a href="mailto:contact@tekisho.ai" className="text-indigo-400 hover:text-indigo-300 transition-colors block">contact@tekisho.ai</a>
+                <a href="mailto:contact@tekisho.ai" className="text-[#6366f1] hover:text-[#7c3aed] transition-colors block">contact@tekisho.ai</a>
               </div>
             </div>
           </div>

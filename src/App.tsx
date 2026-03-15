@@ -1,32 +1,29 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Problem from './components/Problem';
-import Features from './components/Features';
-import Explainer from './components/Explainer';
-import Workflow from './components/Workflow';
-import UserTypes from './components/UserTypes';
-import Pricing from './components/Pricing';
-import ProductPreview from './components/ProductPreview';
-import CTA from './components/CTA';
+import Home from './pages/Home';
+import FeaturesPage from './pages/FeaturesPage';
+import PricingPage from './pages/PricingPage';
+import AgentsPage from './pages/AgentsPage';
+import UseCasesPage from './pages/UseCasesPage';
 import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen selection:bg-indigo-500/30">
-      <Navbar />
-      <main>
-        <Hero />
-        <Problem />
-        <Features />
-        <Explainer />
-        <Workflow />
-        <UserTypes />
-        <ProductPreview />
-        <Pricing />
-        <CTA />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen selection:bg-indigo-500/30">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/features" element={<FeaturesPage />} />
+            <Route path="/agents" element={<AgentsPage />} />
+            <Route path="/use-cases" element={<UseCasesPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
