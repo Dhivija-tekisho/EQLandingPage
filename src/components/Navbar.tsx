@@ -5,24 +5,18 @@ import { Mail, Menu, X, ChevronDown } from 'lucide-react';
 
 const features = [
   { label: 'Smart Inbox',                     slug: 'smart-inbox' },
-  { label: 'Intelligent Categorization',      slug: 'intelligent-categorization' },
-  { label: 'Priority Detection',              slug: 'priority-detection' },
+  { label: 'Auto Inbox Cleanup',              slug: 'auto-inbox-cleanup' },
   { label: 'AI Draft Responses',              slug: 'ai-draft-responses' },
   { label: 'Quick Reply Suggestions',         slug: 'quick-reply-suggestions' },
-  { label: 'Knowledge Base Integration',      slug: 'knowledge-base-integration' },
   { label: 'AI Communication Personas',       slug: 'ai-communication-personas' },
-  { label: 'Auto Inbox Cleanup',              slug: 'auto-inbox-cleanup' },
-  { label: 'Email Analytics',                 slug: 'email-analytics' },
-  { label: 'Gmail Integration',               slug: 'gmail-integration' },
-  { label: 'AI Learning (Dynamic RAG)',        slug: 'ai-learning-dynamic-rag' },
-  { label: 'Security & Privacy',              slug: 'security-privacy' },
-  { label: 'Inbox Zero Assistance',           slug: 'inbox-zero-assistance' },
-  { label: 'Customize Departments/Categories',slug: 'customize-departments-categories' },
+  { label: 'AI Learning (Dynamic RAG)',       slug: 'ai-learning-dynamic-rag' },
+  { label: 'Voice Agent',                     slug: 'voice-agent' },
+  { label: 'Email Accounts',                  slug: 'email-accounts' },
+  { label: 'Knowledge Base Integration',      slug: 'knowledge-base-integration' },
   { label: 'Custom System Prompt',            slug: 'custom-system-prompt' },
-  { label: 'Multi Emails Connection',         slug: 'multi-emails-connection' },
-  { label: 'Feedback',                        slug: 'feedback' },
+  { label: 'Customize Departments/Categories',slug: 'customize-departments-categories' },
+  { label: 'Email Analytics',                 slug: 'email-analytics' },
   { label: 'SLA Breach Alerts',               slug: 'sla-breach-alerts' },
-  { label: 'Scheduling Reminders',            slug: 'scheduling-reminders' },
 ];
 
 export default function Navbar() {
@@ -50,16 +44,17 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0a0e27]/90 backdrop-blur-lg border-b border-white/10 py-4' : 'bg-transparent py-6'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#000000]/90 backdrop-blur-lg border-b border-white/10 py-0' : 'bg-transparent py-3'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-[#6366f1] rounded-xl flex items-center justify-center shadow-lg shadow-[#6366f1]/20">
+          <div className="w-10 h-10 bg-[#4C28DC] rounded-xl flex items-center justify-center shadow-lg shadow-[#4C28DC]/20">
             <Mail className="text-white w-6 h-6" />
           </div>
           <span className="text-xl font-bold tracking-tight font-display">EmailQ</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
+          <Link to="/" className="text-sm font-medium text-white/70 hover:text-white transition-colors">About</Link>
           <div className="relative features-dropdown flex items-center gap-1">
             <Link 
               to="/features"
@@ -88,7 +83,7 @@ export default function Navbar() {
                       onClick={() => setIsFeaturesDropdownOpen(false)}
                       className="px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-[#6366f1]/10 rounded-lg transition-all flex items-center gap-2 group"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#6366f1]/40 group-hover:bg-[#6366f1] transition-colors flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#4C28DC]/40 group-hover:bg-[#4C28DC] transition-colors flex-shrink-0" />
                       {feature.label}
                     </Link>
                   ))}
@@ -116,8 +111,9 @@ export default function Navbar() {
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden absolute top-full left-0 right-0 bg-[#0a0e27] border-b border-white/10 p-6 flex flex-col gap-6"
+          className="md:hidden absolute top-full left-0 right-0 bg-[#000000] border-b border-white/10 p-6 flex flex-col gap-6"
         >
+          <Link to="/" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
           <Link to="/features" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>Features</Link>
           <Link to="/agents" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>Agents</Link>
           <Link to="/use-cases" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>Use Cases</Link>

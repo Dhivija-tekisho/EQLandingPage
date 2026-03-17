@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Brain, PenLine, Search, Clock, ChevronRight, Zap } from 'lucide-react';
+import { Brain, PenLine, Search, Mic, ChevronRight, Zap } from 'lucide-react';
 
 const agents = [
   {
@@ -11,10 +11,10 @@ const agents = [
     description:
       'Reads every incoming email and intelligently categorises it by intent, urgency, and persona context—so the right emails always surface first.',
     models: ['gpt-4o-mini', 'llama3'],
-    color: '#6366f1',
-    glow: 'rgba(99,102,241,0.35)',
-    gradient: 'from-[#6366f1]/20 to-[#4f46e5]/5',
-    border: 'border-[#6366f1]/40',
+    color: '#4C28DC',
+    glow: 'rgba(76,40,220,0.35)',
+    gradient: 'from-[#4C28DC]/20 to-[#4C28DC]/5',
+    border: 'border-[#4C28DC]/40',
     capabilities: [
       'Intent & urgency detection',
       'Persona-aware triage',
@@ -31,10 +31,10 @@ const agents = [
     description:
       'Drafts context-rich, tone-matched replies for both individual users and multi-department organisations, powered by your persona and communication style.',
     models: ['gpt-4o-mini', 'llama3'],
-    color: '#a855f7',
-    glow: 'rgba(168,85,247,0.35)',
-    gradient: 'from-[#a855f7]/20 to-[#9333ea]/5',
-    border: 'border-[#a855f7]/40',
+    color: '#4C28DC',
+    glow: 'rgba(76,40,220,0.35)',
+    gradient: 'from-[#4C28DC]/20 to-[#4C28DC]/5',
+    border: 'border-[#4C28DC]/40',
     capabilities: [
       'Tone & persona matching',
       'Team-org drafting',
@@ -51,10 +51,10 @@ const agents = [
     description:
       'Queries your embedded knowledge base via semantic vector search to pull the most relevant documents and inject rich context into every AI-generated reply.',
     models: ['HuggingFace', 'Pinecone'],
-    color: '#06b6d4',
-    glow: 'rgba(6,182,212,0.35)',
-    gradient: 'from-[#06b6d4]/20 to-[#0891b2]/5',
-    border: 'border-[#06b6d4]/40',
+    color: '#4C28DC',
+    glow: 'rgba(76,40,220,0.35)',
+    gradient: 'from-[#4C28DC]/20 to-[#4C28DC]/5',
+    border: 'border-[#4C28DC]/40',
     capabilities: [
       'Semantic vector search',
       'Knowledge base ingestion',
@@ -64,26 +64,28 @@ const agents = [
     stat: { label: 'Retrieval speed', value: '<120ms' },
   },
   {
-    id: 'automation',
-    icon: Clock,
-    name: 'Background Automation Agent',
-    tagline: '6 scheduled / event-driven jobs',
+    id: 'voice',
+    icon: Mic,
+    name: 'Voice Agent',
+    tagline: 'Real-time conversational AI',
     description:
-      'Silently orchestrates 6 recurring and event-triggered background jobs—handling SLA breach alerts, inbox cleanup, reminders, and more via pg-boss.',
-    models: ['pg-boss'],
-    color: '#10b981',
-    glow: 'rgba(16,185,129,0.35)',
-    gradient: 'from-[#10b981]/20 to-[#059669]/5',
-    border: 'border-[#10b981]/40',
+      'A multi-modal AI assistant that allows you to manage your inbox via natural voice commands. Summarise, draft, and send emails just by speaking.',
+    models: ['Whisper-v3', 'Vapi'],
+    color: '#4C28DC',
+    glow: 'rgba(76,40,220,0.35)',
+    gradient: 'from-[#4C28DC]/20 to-[#4C28DC]/5',
+    border: 'border-[#4C28DC]/40',
     capabilities: [
-      'SLA breach alerts',
-      'Inbox cleanup jobs',
-      'Scheduling reminders',
-      'Event-driven triggers',
+      'Natural language understanding',
+      'Voice-to-text drafting',
+      'Audio inbox summaries',
+      'Hands-free orchestration',
     ],
-    stat: { label: 'Jobs managed', value: '6 active' },
+    stat: { label: 'Latency', value: '<200ms' },
   },
 ];
+
+
 
 
 
@@ -91,12 +93,12 @@ export default function Agents() {
   const [active, setActive] = useState<string | null>(null);
 
   return (
-    <section className="section-padding relative overflow-hidden">
+    <section className="px-6 md:px-12 lg:px-24 pt-0 pb-10 relative overflow-hidden">
       {/* Background atmospheric glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-5%] left-[20%] w-[35%] h-[35%] bg-[#6366f1]/10 blur-[140px] rounded-full" />
-        <div className="absolute bottom-[-5%] right-[15%] w-[30%] h-[30%] bg-[#a855f7]/10 blur-[140px] rounded-full" />
-        <div className="absolute top-[40%] left-[-5%] w-[20%] h-[40%] bg-[#06b6d4]/8 blur-[120px] rounded-full" />
+        <div className="absolute top-[-5%] left-[20%] w-[35%] h-[35%] bg-[#4C28DC]/12 blur-[140px] rounded-full" />
+        <div className="absolute bottom-[-5%] right-[15%] w-[30%] h-[30%] bg-[#4C28DC]/10 blur-[140px] rounded-full" />
+        <div className="absolute top-[40%] left-[-5%] w-[20%] h-[40%] bg-[#4C28DC]/8 blur-[120px] rounded-full" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -105,16 +107,13 @@ export default function Agents() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-10"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#6366f1]/30 bg-[#6366f1]/10 text-[#a5b4fc] text-sm font-semibold mb-6 tracking-wide uppercase">
-            <Zap className="w-3.5 h-3.5" /> AI-Powered Backend
-          </span>
           <h2 className="text-4xl md:text-5xl font-bold font-display mb-6">
             Meet the <span className="text-gradient">Intelligence Layer</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-            Four specialised AI agents work in concert behind the scenes—classifying, drafting, retrieving, and automating so you never miss a beat.
+            Four specialised AI agents work in concert behind the scenes—classifying, drafting, retrieving, and voice orchestrating so you never miss a beat.
           </p>
         </motion.div>
 

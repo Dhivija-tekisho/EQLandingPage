@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import FeaturesPage from './pages/FeaturesPage';
 import PricingPage from './pages/PricingPage';
@@ -11,7 +12,8 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <Router basename={import.meta.env.BASE_URL}>
-      <div className="min-h-screen selection:bg-indigo-500/30">
+      <ScrollToTop />
+      <div className="min-h-screen selection:bg-[#4C28DC]/30">
         <Navbar />
         <main>
           <Routes>

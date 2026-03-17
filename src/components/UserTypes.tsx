@@ -39,16 +39,16 @@ export default function UserTypes() {
               <Building2 size={120} />
             </div>
             <div className="relative z-10">
-              <div className="w-14 h-14 rounded-xl bg-[#6366f1]/20 flex items-center justify-center mb-8 border border-[#6366f1]/30">
-                <Building2 className="text-[#6366f1] w-8 h-8" />
+              <div className="w-14 h-14 rounded-xl bg-[#4C28DC]/20 flex items-center justify-center mb-8 border border-[#4C28DC]/30">
+                <Building2 className="text-[#4C28DC] w-8 h-8" />
               </div>
               <h3 className="text-3xl font-bold mb-6">For Organizations</h3>
               <p className="text-gray-400 mb-8 text-lg">Scale your customer support and internal communications with enterprise-grade orchestration.</p>
               <ul className="space-y-4">
                 {orgFeatures.map((f, i) => (
                   <li key={i} className="flex items-center gap-3 text-white/80">
-                    <div className="w-5 h-5 rounded-full bg-[#6366f1]/20 flex items-center justify-center">
-                      <Check className="w-3 h-3 text-[#6366f1]" />
+                    <div className="w-5 h-5 rounded-full bg-[#4C28DC]/20 flex items-center justify-center">
+                      <Check className="w-3 h-3 text-[#4C28DC]" />
                     </div>
                     {f}
                   </li>
@@ -62,22 +62,22 @@ export default function UserTypes() {
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-10 relative overflow-hidden group border-[#a855f7]/20"
+            className="glass-card p-10 relative overflow-hidden group border-[#4C28DC]/20"
           >
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform">
               <User size={120} />
             </div>
             <div className="relative z-10">
-              <div className="w-14 h-14 rounded-xl bg-[#a855f7]/20 flex items-center justify-center mb-8 border border-[#a855f7]/30">
-                <User className="text-[#a855f7] w-8 h-8" />
+              <div className="w-14 h-14 rounded-xl bg-[#4C28DC]/20 flex items-center justify-center mb-8 border border-[#4C28DC]/30">
+                <User className="text-[#4C28DC] w-8 h-8" />
               </div>
               <h3 className="text-3xl font-bold mb-6">For Individual</h3>
               <p className="text-gray-400 mb-8 text-lg">Supercharge your personal productivity and never let an important email slip through the cracks.</p>
               <ul className="space-y-4">
                 {empFeatures.map((f, i) => (
                   <li key={i} className="flex items-center gap-3 text-white/80">
-                    <div className="w-5 h-5 rounded-full bg-[#a855f7]/20 flex items-center justify-center">
-                      <Check className="w-3 h-3 text-[#a855f7]" />
+                    <div className="w-5 h-5 rounded-full bg-[#4C28DC]/20 flex items-center justify-center">
+                      <Check className="w-3 h-3 text-[#4C28DC]" />
                     </div>
                     {f}
                   </li>

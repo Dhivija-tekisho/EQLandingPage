@@ -6,7 +6,7 @@ const plans = [
   {
     name: "Free",
     price: "Free",
-    icon: <Zap className="w-6 h-6 text-indigo-400" />,
+    icon: <Zap className="w-6 h-6 text-[#4C28DC]" />,
     features: [
       "200K tokens/month",
       "≈ 50 emails",
@@ -19,7 +19,7 @@ const plans = [
     name: "Starter",
     price: "$5",
     period: "/mo",
-    icon: <Sparkles className="w-6 h-6 text-blue-400" />,
+    icon: <Sparkles className="w-6 h-6 text-[#4C28DC]" />,
     features: [
       "2.0M tokens/month",
       "≈ 500 emails",
@@ -32,7 +32,7 @@ const plans = [
     name: "Growth",
     price: "$15",
     period: "/mo",
-    icon: <TrendingUp className="w-6 h-6 text-purple-400" />,
+    icon: <TrendingUp className="w-6 h-6 text-[#4C28DC]" />,
     features: [
       "8.0M tokens/month",
       "≈ 2000 emails",
@@ -45,7 +45,7 @@ const plans = [
     name: "Pro",
     price: "$49",
     period: "/mo",
-    icon: <Crown className="w-6 h-6 text-orange-400" />,
+    icon: <Crown className="w-6 h-6 text-[#4C28DC]" />,
     features: [
       "40.0M tokens/month",
       "≈ 10000 emails",
@@ -56,12 +56,13 @@ const plans = [
   }
 ];
 
+
 export default function Pricing() {
   return (
     <section id="pricing" className="section-padding">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">Available Plans</h2>
+        <div className="text-center mb-3">
+          <h2 className="text-3xl md:text-5xl font-bold font-display mb-2">Available Plans</h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Choose the perfect plan for your email orchestration needs.
           </p>
@@ -75,10 +76,10 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`glass-card p-8 flex flex-col ${plan.current ? 'border-[#6366f1]/50 ring-1 ring-[#6366f1]/50' : ''}`}
+              className={`glass-card p-8 flex flex-col ${plan.current ? 'border-[#4C28DC]/50 ring-1 ring-[#4C28DC]/50' : ''}`}
             >
               {plan.current && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-[#6366f1] text-[10px] font-bold uppercase tracking-widest rounded-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-[#4C28DC] text-[10px] font-bold uppercase tracking-widest rounded-full">
                   Current
                 </div>
               )}
@@ -96,7 +97,7 @@ export default function Pricing() {
               <ul className="space-y-4 mb-8 flex-grow">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm text-gray-400">
-                    <Check className="w-4 h-4 text-[#6366f1] shrink-0" />
+                    <Check className="w-4 h-4 text-[#4C28DC] shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -106,7 +107,7 @@ export default function Pricing() {
                 className={`w-full py-3 rounded-lg font-semibold transition-all duration-200 ${
                   plan.current 
                     ? 'bg-white/5 text-white/40 cursor-default' 
-                    : 'bg-[#6366f1] hover:bg-[#7c3aed] text-white shadow-lg shadow-[#6366f1]/30'
+                    : 'bg-[#4C28DC] hover:bg-[#3b1fb1] text-white shadow-lg shadow-[#4C28DC]/30'
                 }`}
               >
                 {plan.buttonText}

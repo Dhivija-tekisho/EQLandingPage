@@ -22,7 +22,7 @@ export default function FeaturesPage() {
         // Brief indigo glow pulse to highlight the card
         el.style.transition = 'box-shadow 0.4s ease';
         el.style.boxShadow =
-          '0 0 0 2px rgba(99,102,241,0.75), 0 0 28px rgba(99,102,241,0.35)';
+          '0 0 0 2px rgba(76,40,220,0.75), 0 0 28px rgba(76,40,220,0.35)';
         setTimeout(() => {
           el.style.boxShadow = '';
         }, 1800);

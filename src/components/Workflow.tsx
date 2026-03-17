@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { 
-  Link2, 
-  Mail, 
-  Search, 
-  BrainCircuit, 
-  FileEdit, 
-  Send, 
+import {
+  Link2,
+  Mail,
+  Search,
+  BrainCircuit,
+  FileEdit,
+  Send,
   BarChart
 } from 'lucide-react';
 
@@ -23,9 +23,9 @@ const steps = [
 export default function Workflow() {
 
   return (
-    <section id="workflow" className="section-padding overflow-hidden">
+    <section id="workflow" className="pt-10 pb-2 px-6 md:px-12 lg:px-24 overflow-hidden animated-glow" style={{ '--glow-color': 'rgba(168, 85, 247, 0.12)' } as React.CSSProperties}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">How it <span className="text-gradient">Works</span></h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             A seamless workflow from connection to completion.
@@ -33,9 +33,9 @@ export default function Workflow() {
         </div>
 
         {/* ── Workflow Steps ── */}
-        <div className="relative mb-20">
+        <div className="relative mb-10">
           {/* Connector Line */}
-          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-[#6366f1]/0 via-[#6366f1]/20 to-[#6366f1]/0 -translate-y-1/2 hidden lg:block"></div>
+          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-[#4C28DC]/0 via-[#4C28DC]/20 to-[#4C28DC]/0 -translate-y-1/2 hidden lg:block"></div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 relative z-10">
             {steps.map((step, index) => (
@@ -47,10 +47,10 @@ export default function Workflow() {
                 transition={{ delay: index * 0.1 }}
                 className="flex flex-col items-center text-center group"
               >
-                <div className="w-16 h-16 rounded-2xl glass-card flex items-center justify-center mb-6 group-hover:bg-[#6366f1] group-hover:scale-110 transition-all duration-300">
-                  {React.cloneElement(step.icon as React.ReactElement, { className: "w-8 h-8 text-[#6366f1] group-hover:text-white transition-colors" })}
+                <div className="w-16 h-16 rounded-2xl glass-card flex items-center justify-center mb-6 group-hover:bg-[#4C28DC] group-hover:scale-110 transition-all duration-300">
+                  {React.cloneElement(step.icon as React.ReactElement, { className: "w-8 h-8 text-[#4C28DC] group-hover:text-white transition-colors" })}
                 </div>
-                <div className="text-xs font-bold text-[#6366f1] uppercase tracking-widest mb-2">Step {index + 1}</div>
+                <div className="text-xs font-bold text-[#4C28DC] uppercase tracking-widest mb-2">Step {index + 1}</div>
                 <h3 className="font-bold mb-1">{step.label}</h3>
                 <p className="text-xs text-white/40">{step.desc}</p>
               </motion.div>

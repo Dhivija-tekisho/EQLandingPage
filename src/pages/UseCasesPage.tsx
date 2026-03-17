@@ -13,80 +13,62 @@ import CTA from '../components/CTA';
 const orgUseCases = [
   {
     icon: Headphones,
-    title: 'Customer Support Teams',
-    description: 'Slash response times and deliver consistent, high-quality support at scale.',
+    title: 'Customer Support',
+    description: 'Slash response times and deliver high-quality support at scale.',
     benefits: [
-      'Auto-categorize support tickets by type & urgency',
-      'Generate consistent, helpful responses instantly',
-      'Reduce average response times dramatically',
-      'Track team performance with SLA dashboards',
-      'Maintain a living knowledge base of solutions',
-      'Detect escalation-worthy emails automatically',
+      'Auto-categorize tickets by urgency',
+      'Generate instant, helpful replies',
+      'Track performance via SLA dashboards',
     ],
   },
   {
     icon: TrendingUp,
     title: 'Sales Teams',
-    description: 'Focus on closing deals — let EmailQ handle the inbox chasing.',
+    description: 'Focus on closing deals — let AI handle the inbox chasing.',
     benefits: [
       'Prioritise hot leads with AI scoring',
-      'Never miss a follow-up opportunity again',
-      'Craft persuasive, personalised replies in seconds',
-      'Track email engagement and open signals',
-      'Route inbound leads to the right rep instantly',
-      'Get pipeline insights from email activity',
+      'Craft persuasive replies in seconds',
+      'Get pipeline insights from activity',
     ],
   },
   {
     icon: Users,
-    title: 'HR & Recruiting Teams',
+    title: 'HR & Recruiting',
     description: 'Streamline candidate communication from application to offer.',
     benefits: [
-      'Auto-categorize applications by role & stage',
-      'Send timely, professional acknowledgements',
-      'Track candidate pipeline through email threads',
-      'Coordinate interview scheduling automatically',
-      'Maintain GDPR-compliant communication logs',
-      'Reduce time-to-hire with faster triage',
+      'Auto-categorize applications by stage',
+      'Coordinate interview scheduling',
+      'Faster triage for time-to-hire',
     ],
   },
   {
     icon: ShoppingBag,
-    title: 'E-commerce & Retail',
+    title: 'E-commerce',
     description: 'Turn every customer email into a seamless brand experience.',
     benefits: [
-      'Auto-reply to order & shipping inquiries',
-      'Escalate complaints before they become reviews',
-      'Categorise returns & refund requests instantly',
-      'Track customer sentiment across all emails',
-      'Sync responses with your helpdesk or CRM',
-      'Reduce support ticket volume with smart FAQs',
+      'Auto-reply to shipping inquiries',
+      'Escalate complaints before reviews',
+      'Categorise returns & refunds instantly',
     ],
   },
   {
     icon: BookOpen,
-    title: 'Educational Institutions',
+    title: 'Education',
     description: 'Keep students, faculty, and parents in perfect sync.',
     benefits: [
-      'Route student queries to the right department',
-      'Generate consistent academic support replies',
-      'Track parent & community communications',
+      'Route student queries to departments',
+      'Generate academic support replies',
       'Automate admission inquiry responses',
-      'Maintain archived records of all correspondence',
-      'Alert staff to urgent or sensitive emails instantly',
     ],
   },
   {
     icon: Shield,
-    title: 'Legal & Compliance Teams',
-    description: 'Stay on top of critical correspondence with zero missed deadlines.',
+    title: 'Legal & Compliance',
+    description: 'Stay on top of correspondence with zero missed deadlines.',
     benefits: [
-      'Flag high-priority legal notices immediately',
-      'Draft compliant, professional responses',
-      'Maintain audit trails of all correspondence',
-      'Track regulatory deadline reminders',
-      'Route sensitive emails to the right counsel',
-      'Reduce risk of missed critical communications',
+      'Flag high-priority notices immediately',
+      'Maintain audit trails of correspondence',
+      'Reduce risk of missed communications',
     ],
   },
 ];
@@ -94,67 +76,52 @@ const orgUseCases = [
 const individualUseCases = [
   {
     icon: Briefcase,
-    title: 'Freelancers & Consultants',
+    title: 'Freelancers',
     description: 'More billable hours, less inbox anxiety.',
     benefits: [
-      'Quickly respond to client inquiries with AI drafts',
+      'AI drafts for client inquiries',
       'Prioritise paying clients automatically',
-      'Track invoices and payment-related emails',
-      'Maintain professional tone across all replies',
-      'Get reminders for unanswered client threads',
-      'Spend more time on billable work',
+      'Track invoices & payment threads',
     ],
   },
   {
     icon: GraduationCap,
     title: 'Job Seekers',
-    description: 'Stay ahead in your job search — never miss an opportunity.',
+    description: 'Stay ahead in your search — never miss an opportunity.',
     benefits: [
-      'Never miss recruiter emails or deadlines',
-      'Respond promptly to interview invitations',
-      'Track application status across companies',
-      'Organise all interview communications neatly',
-      'Generate polished follow-up emails instantly',
-      'Make a great first impression every time',
+      'Never miss recruiter deadlines',
+      'Respond promptly to invitations',
+      'Generate polished follow-up emails',
     ],
   },
   {
     icon: Laptop,
     title: 'Remote Workers',
-    description: 'Cut through async communication overload and stay focused.',
+    description: 'Cut through async overload and stay focused.',
     benefits: [
-      'Triage team emails by urgency & project',
-      'Draft async updates and status replies fast',
-      'Never lose track of action items in threads',
-      'Get digest summaries of long email chains',
-      'Separate work and personal email contexts',
-      'Reclaim your deep-work hours',
+      'Triage team emails by urgency',
+      'Draft async updates & replies fast',
+      'Digest summaries of long chains',
     ],
   },
   {
     icon: ShoppingBag,
-    title: 'Small Business Owners',
+    title: 'Small Business',
     description: 'Run your business communication like a pro team — solo.',
     benefits: [
-      'Handle multiple business email threads at once',
-      'Maintain professional responses across topics',
-      'Save money by replacing dedicated support staff',
-      'Scale communication as your business grows',
-      'Auto-categorise supplier, client & admin emails',
-      'Never lose a business opportunity in the inbox',
+      'Handle multiple threads at once',
+      'Professional responses across topics',
+      'Auto-categorise supplier & admin mail',
     ],
   },
   {
     icon: Heart,
     title: 'Busy Parents',
-    description: 'Keep your family life organised without email overwhelm.',
+    description: 'Keep your family life organised without the overwhelm.',
     benefits: [
-      'Track school newsletters, events & deadlines',
-      'Manage bills, appointments & subscriptions',
-      'Filter out commercial noise automatically',
-      'Keep family admin emails in one place',
-      'Get reminders for time-sensitive family emails',
-      'Reduce email stress and reclaim family time',
+      'Track school events & deadlines',
+      'Manage bills & appointments easily',
+      'Reminders for time-sensitive emails',
     ],
   },
   {
@@ -162,15 +129,14 @@ const individualUseCases = [
     title: 'Content Creators',
     description: 'Manage brand deals, fan mail, and collabs with ease.',
     benefits: [
-      'Prioritise brand deal and sponsorship emails',
-      'Auto-draft replies to collaboration requests',
-      'Organise fan mail and community messages',
-      'Track PR package tracking communications',
-      'Never miss a monetisation opportunity',
-      'Spend more time creating, less time replying',
+      'Prioritise brand deals & sponsorships',
+      'Auto-draft collab request replies',
+      'Organise fan mail and community',
     ],
   },
 ];
+
+
 
 const orgSteps = [
   { icon: Mail, step: '01', title: 'Create your organisation account', desc: 'Sign up and configure your workspace with your company name and domain.' },
@@ -283,16 +249,16 @@ export default function UseCasesPage() {
 
   const cases = tab === 'org' ? orgUseCases : individualUseCases;
   const steps = tab === 'org' ? orgSteps : individualSteps;
-  const accentColor = tab === 'org' ? '#6366f1' : '#a855f7';
+  const accentColor = '#4C28DC';
 
   return (
-    <div className="pt-28">
+    <div className="pt-20">
       {/* ── Hero ── */}
       <section className="relative section-padding pb-0 overflow-hidden">
         {/* Ambient glows */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-[-10%] left-[25%] w-[40%] h-[40%] bg-[#6366f1]/10 blur-[140px] rounded-full" />
-          <div className="absolute top-[20%] right-[10%] w-[25%] h-[30%] bg-[#a855f7]/10 blur-[120px] rounded-full" />
+          <div className="absolute top-[-10%] left-[25%] w-[40%] h-[40%] bg-[#4C28DC]/10 blur-[140px] rounded-full" />
+          <div className="absolute top-[20%] right-[10%] w-[25%] h-[30%] bg-[#4C28DC]/10 blur-[120px] rounded-full" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -301,7 +267,7 @@ export default function UseCasesPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-14"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#6366f1]/30 bg-[#6366f1]/10 text-[#a5b4fc] text-sm font-semibold mb-6 uppercase tracking-wide">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#4C28DC]/30 bg-[#4C28DC]/10 text-[#a5b4fc] text-sm font-semibold mb-6 uppercase tracking-wide">
               <Zap className="w-3.5 h-3.5" /> Who EmailQ is built for
             </span>
             <h1 className="text-4xl md:text-6xl font-bold font-display mb-6">
@@ -324,7 +290,7 @@ export default function UseCasesPage() {
                   onClick={() => setTab(key)}
                   className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${
                     tab === key
-                      ? 'bg-[#6366f1] text-white shadow-lg shadow-[#6366f1]/30'
+                      ? 'bg-[#4C28DC] text-white shadow-lg shadow-[#4C28DC]/30'
                       : 'text-gray-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
@@ -351,8 +317,8 @@ export default function UseCasesPage() {
               {/* Section label */}
               <div className="flex items-center gap-3 mb-8">
                 {tab === 'org'
-                  ? <Building2 className="w-5 h-5 text-[#6366f1]" />
-                  : <User className="w-5 h-5 text-[#a855f7]" />}
+                  ? <Building2 className="w-5 h-5 text-[#4C28DC]" />
+                  : <User className="w-5 h-5 text-[#4C28DC]" />}
                 <h2 className="text-2xl font-bold font-display">
                   {tab === 'org' ? 'Organisation Use Cases' : 'Individual Use Cases'}
                 </h2>
@@ -381,7 +347,7 @@ export default function UseCasesPage() {
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-14"
+            className="text-center mb-5"
           >
             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
               Getting <span className="text-gradient">Started</span>

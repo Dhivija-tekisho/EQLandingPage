@@ -4,7 +4,7 @@ import CTA from '../components/CTA';
 
 export default function AgentsPage() {
   return (
-    <div className="pt-28">
+    <div className="pt-20">
       <Agents />
       <CTA />
     </div>

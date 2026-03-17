@@ -22,11 +22,14 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="section-padding bg-white/[0.02]">
+    <section className="pt-16 pb-16 px-6 md:px-12 lg:px-24 bg-white/[0.02] animated-glow" style={{ '--glow-color': 'rgba(99, 102, 241, 0.15)' } as React.CSSProperties}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">Email was built for a different era. <span className="text-white/40">EmailQ brings it into the AI era</span></h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
+            Email was built for a different era. <br />
+            <span className="text-gradient">EmailQ brings it into the AI era</span>
+          </h2>
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
             Traditional inboxes are passive lists of messages. EmailQ turns your inbox into an active orchestration engine.
           </p>
         </div>
@@ -39,13 +42,15 @@ export default function Problem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="glass-card p-8 hover:bg-white/[0.08] transition-colors group"
+              className="glass-card p-4 hover:bg-white/[0.1] transition-all duration-300 group border border-white/5 hover:border-[#6366f1]/30 flex gap-4 items-start"
             >
-              <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center mb-6 border border-white/10 group-hover:scale-110 transition-transform">
-                {problem.icon}
+              <div className="w-10 h-10 rounded-lg bg-[#6366f1]/10 flex items-center justify-center border border-[#6366f1]/20 group-hover:scale-110 transition-transform flex-shrink-0">
+                {React.cloneElement(problem.icon as React.ReactElement, { className: "w-5 h-5" })}
               </div>
-              <h3 className="text-xl font-bold mb-4">{problem.title}</h3>
-              <p className="text-gray-400 leading-relaxed">{problem.description}</p>
+              <div>
+                <h3 className="text-lg font-bold mb-2 text-white">{problem.title}</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">{problem.description}</p>
+              </div>
             </motion.div>
           ))}
         </div>
