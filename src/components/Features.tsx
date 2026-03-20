@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import {
   Inbox, Trash2, FileText, Zap, UserCircle2, BrainCircuit,
   Mail, Database, Terminal, LayoutList,
-  BarChart3, BellRing, Phone
+  BarChart3, BellRing, Mic
 } from 'lucide-react';
 
 /** Convert a feature title to a URL-safe id, e.g. "AI Draft Responses" → "ai-draft-responses" */
@@ -55,9 +55,9 @@ const allFeatures: Feature[] = [
     accent: '#4C28DC',
   },
   {
-    icon: <Phone className="w-5 h-5" />,
+    icon: <Mic className="w-5 h-5" />,
     title: 'Voice Agent',
-    description: 'An AI assistant (like Siri or Alexa) that responds to your commands and provides information about the application.',
+    description: 'An AI assistant that responds to your commands and provides information about the application.',
     accent: '#4C28DC',
   },
   {

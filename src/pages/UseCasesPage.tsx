@@ -34,7 +34,7 @@ const orgUseCases = [
   {
     icon: Users,
     title: 'HR & Recruiting',
-    description: 'Streamline candidate communication from application to offer.',
+    description: 'Streamline communication from application to offer.',
     benefits: [
       'Auto-categorize applications by stage',
       'Coordinate interview scheduling',
@@ -254,22 +254,19 @@ export default function UseCasesPage() {
   return (
     <div className="pt-20">
       {/* ── Hero ── */}
-      <section className="relative section-padding pb-0 overflow-hidden">
+      <section className="relative section-padding pb-0 pt-0 overflow-hidden">
         {/* Ambient glows */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-[-10%] left-[25%] w-[40%] h-[40%] bg-[#4C28DC]/10 blur-[140px] rounded-full" />
           <div className="absolute top-[20%] right-[10%] w-[25%] h-[30%] bg-[#4C28DC]/10 blur-[120px] rounded-full" />
         </div>
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-3xl mx-auto relative z-8">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-14"
+            className="text-center mb-4"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#4C28DC]/30 bg-[#4C28DC]/10 text-[#a5b4fc] text-sm font-semibold mb-6 uppercase tracking-wide">
-              <Zap className="w-3.5 h-3.5" /> Who EmailQ is built for
-            </span>
             <h1 className="text-4xl md:text-6xl font-bold font-display mb-6">
               Built for <span className="text-gradient">every inbox</span>
             </h1>
@@ -279,7 +276,7 @@ export default function UseCasesPage() {
           </motion.div>
 
           {/* Tab switcher */}
-          <div className="flex justify-center mb-14">
+          <div className="flex justify-center mb-0">
             <div className="flex items-center gap-1 p-1.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
               {([
                 { key: 'org', label: 'For Organisations', icon: Building2 },

@@ -1,4 +1,4 @@
-import React from 'react';
+import logo from '../assets/logo.jpeg';
 import { Mail, Linkedin, Instagram } from 'lucide-react';
 
 const XIcon = () => (
@@ -14,10 +14,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-[#6366f1] rounded-lg flex items-center justify-center">
-                <Mail className="text-white w-5 h-5" />
-              </div>
-              <span className="text-xl font-bold tracking-tight font-display">EmailQ</span>
+              <img src={logo} alt="EmailQ Logo" className="h-16 w-auto object-contain" />
             </div>
             <p className="text-gray-400 max-w-sm mb-8 leading-relaxed">
               The AI-powered email orchestration platform for modern teams. Reclaim your focus and let AI handle the noise.

@@ -18,9 +18,9 @@ const empFeatures = [
 
 export default function UserTypes() {
   return (
-    <section id="use-cases" className="section-padding bg-white/[0.02]">
+    <section id="use-cases" className="section-padding bg-white/[0.01]">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-0">
           <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">Tailored for your role</h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             Whether you're managing a team or your own productivity, we've got you covered.
@@ -38,12 +38,12 @@ export default function UserTypes() {
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform">
               <Building2 size={120} />
             </div>
-            <div className="relative z-10">
-              <div className="w-14 h-14 rounded-xl bg-[#4C28DC]/20 flex items-center justify-center mb-8 border border-[#4C28DC]/30">
+            <div className="relative z-4">
+              <div className="w-14 h-8 rounded-xl bg-[#4C28DC]/20 flex items-center justify-center mb-4 border border-[#4C28DC]/30">
                 <Building2 className="text-[#4C28DC] w-8 h-8" />
               </div>
-              <h3 className="text-3xl font-bold mb-6">For Organizations</h3>
-              <p className="text-gray-400 mb-8 text-lg">Scale your customer support and internal communications with enterprise-grade orchestration.</p>
+              <h3 className="text-3xl font-bold mb-2">For Organizations</h3>
+              <p className="text-gray-400 mb-2 text-lg">Scale your customer support and internal communications with enterprise-grade orchestration.</p>
               <ul className="space-y-4">
                 {orgFeatures.map((f, i) => (
                   <li key={i} className="flex items-center gap-3 text-white/80">
@@ -68,7 +68,7 @@ export default function UserTypes() {
               <User size={120} />
             </div>
             <div className="relative z-10">
-              <div className="w-14 h-14 rounded-xl bg-[#4C28DC]/20 flex items-center justify-center mb-8 border border-[#4C28DC]/30">
+              <div className="w-4 h-4 rounded-xl bg-[#4C28DC]/20 flex items-center justify-center mb-8 border border-[#4C28DC]/30">
                 <User className="text-[#4C28DC] w-8 h-8" />
               </div>
               <h3 className="text-3xl font-bold mb-6">For Individual</h3>

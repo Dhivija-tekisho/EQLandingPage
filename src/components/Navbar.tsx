@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo.jpeg';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { Mail, Menu, X, ChevronDown } from 'lucide-react';
@@ -46,11 +47,8 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#000000]/90 backdrop-blur-lg border-b border-white/10 py-0' : 'bg-transparent py-3'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-[#4C28DC] rounded-xl flex items-center justify-center shadow-lg shadow-[#4C28DC]/20">
-            <Mail className="text-white w-6 h-6" />
-          </div>
-          <span className="text-xl font-bold tracking-tight font-display">EmailQ</span>
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="EmailQ Logo" className="h-15 w-auto object-contain" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
