@@ -19,7 +19,7 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="min-h-screen flex flex-col justify-center py-12 md:py-20 px-6 md:px-12 lg:px-24 bg-white/[0.02] animated-glow" style={{ '--glow-color': 'rgba(99, 102, 241, 0.15)' } as React.CSSProperties}>
+    <section className="min-h-screen flex flex-col justify-center py-12 md:py-20 px-6 md:px-12 lg:px-24 animated-glow" style={{ '--glow-color': 'rgba(99, 102, 241, 0.15)' } as React.CSSProperties}>
       <div className="max-w-7xl mx-auto w-full">
         <div className="text-center mb-10">
           <div className="inline-block px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-sm font-bold tracking-widest mb-6 uppercase">

@@ -1,5 +1,6 @@
 import logo from '../assets/logo.jpeg';
 import { Mail, Linkedin, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const XIcon = () => (
   <svg viewBox="0 0 24 24" aria-hidden="true" className="w-5 h-5 fill-current">
@@ -35,11 +36,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-6">Resources & Legal</h4>
             <ul className="space-y-4 text-sm text-white/50">
-              <li><a href="#" className="hover:text-white transition-colors">Documents</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Compliance</a></li>
+              <li><Link to="/docs" className="hover:text-white transition-colors">Documents</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link></li>
+              <li><Link to="/cookie-policy" className="hover:text-white transition-colors">Cookie Policy</Link></li>
+              <li><Link to="/compliance" className="hover:text-white transition-colors">Compliance</Link></li>
             </ul>
           </div>
 
@@ -71,7 +72,7 @@ export default function Footer() {
             <div className="text-sm text-white/50 space-y-4">
               <div className="space-y-2">
                 <p className="text-white/30 text-[10px] uppercase font-bold tracking-wider">Phone</p>
-                <p className="text-white/70">+91 7331104192</p>
+                <p className="text-white/70">+91 90594 43516</p>
               </div>
               <div className="space-y-2">
                 <p className="text-white/30 text-[10px] uppercase font-bold tracking-wider">Email</p>

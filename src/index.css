@@ -12,7 +12,17 @@
   }
   body {
     @apply text-white font-sans antialiased min-h-screen;
-    background-color: #130B21;
+    background-color: #0b0515;
+    background-image:
+      linear-gradient(to right, rgba(139, 92, 246, 0.12) 1px, transparent 1px),
+      repeating-linear-gradient(
+        to right,
+        rgba(20, 8, 40, 0.6) 0px,
+        rgba(20, 8, 40, 0.6) 79px,
+        transparent 79px,
+        transparent 80px
+      );
+    background-size: 80px 100%;
   }
 }
 
