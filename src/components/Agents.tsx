@@ -11,10 +11,10 @@ const agents = [
     description:
       'Reads every incoming email and intelligently categorises it by intent, urgency, and persona context—so the right emails always surface first.',
     models: ['gpt-4o-mini', 'llama3'],
-    color: '#4C28DC',
+    color: '#8b5cf6',
     glow: 'rgba(76,40,220,0.35)',
-    gradient: 'from-[#4C28DC]/20 to-[#4C28DC]/5',
-    border: 'border-[#4C28DC]/40',
+    gradient: 'from-[#8b5cf6]/20 to-[#8b5cf6]/5',
+    border: 'border-[#8b5cf6]/40',
     capabilities: [
       'Intent & urgency detection',
       'Persona-aware triage',
@@ -31,10 +31,10 @@ const agents = [
     description:
       'Drafts context-rich, tone-matched replies for both individual users and multi-department organisations, powered by your persona and communication style.',
     models: ['gpt-4o-mini', 'llama3'],
-    color: '#4C28DC',
+    color: '#8b5cf6',
     glow: 'rgba(76,40,220,0.35)',
-    gradient: 'from-[#4C28DC]/20 to-[#4C28DC]/5',
-    border: 'border-[#4C28DC]/40',
+    gradient: 'from-[#8b5cf6]/20 to-[#8b5cf6]/5',
+    border: 'border-[#8b5cf6]/40',
     capabilities: [
       'Tone & persona matching',
       'Team-org drafting',
@@ -51,10 +51,10 @@ const agents = [
     description:
       'Queries your embedded knowledge base via semantic vector search to pull the most relevant documents and inject rich context into every AI-generated reply.',
     models: ['HuggingFace', 'Pinecone'],
-    color: '#4C28DC',
+    color: '#8b5cf6',
     glow: 'rgba(76,40,220,0.35)',
-    gradient: 'from-[#4C28DC]/20 to-[#4C28DC]/5',
-    border: 'border-[#4C28DC]/40',
+    gradient: 'from-[#8b5cf6]/20 to-[#8b5cf6]/5',
+    border: 'border-[#8b5cf6]/40',
     capabilities: [
       'Semantic vector search',
       'Knowledge base ingestion',
@@ -71,10 +71,10 @@ const agents = [
     description:
       'A multi-modal AI assistant that allows you to manage your inbox via natural voice commands. Summarise, draft, and send emails just by speaking.',
     models: ['Whisper-v3', 'Vapi'],
-    color: '#4C28DC',
+    color: '#8b5cf6',
     glow: 'rgba(76,40,220,0.35)',
-    gradient: 'from-[#4C28DC]/20 to-[#4C28DC]/5',
-    border: 'border-[#4C28DC]/40',
+    gradient: 'from-[#8b5cf6]/20 to-[#8b5cf6]/5',
+    border: 'border-[#8b5cf6]/40',
     capabilities: [
       'Natural language understanding',
       'Voice-to-text drafting',
@@ -96,9 +96,9 @@ export default function Agents() {
     <section className="px-6 md:px-12 lg:px-24 pt-0 pb-10 relative overflow-hidden">
       {/* Background atmospheric glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-[-5%] left-[20%] w-[35%] h-[35%] bg-[#4C28DC]/12 blur-[140px] rounded-full" />
-        <div className="absolute bottom-[-5%] right-[15%] w-[30%] h-[30%] bg-[#4C28DC]/10 blur-[140px] rounded-full" />
-        <div className="absolute top-[40%] left-[-5%] w-[20%] h-[40%] bg-[#4C28DC]/8 blur-[120px] rounded-full" />
+        <div className="absolute top-[-5%] left-[20%] w-[35%] h-[35%] bg-[#8b5cf6]/12 blur-[140px] rounded-full" />
+        <div className="absolute bottom-[-5%] right-[15%] w-[30%] h-[30%] bg-[#8b5cf6]/10 blur-[140px] rounded-full" />
+        <div className="absolute top-[40%] left-[-5%] w-[20%] h-[40%] bg-[#8b5cf6]/8 blur-[120px] rounded-full" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">

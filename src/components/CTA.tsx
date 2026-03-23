@@ -1,20 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
 
 export default function CTA() {
-  return (
-    <section className="pt-0 pb-0 px-6 md:px-12 lg:px-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[#4C28DC]/5 pointer-events-none"></div>
-
-      <div className="max-w-5xl mx-auto relative z-10 text-center glass-card p-12 md:p-24 border-[#4C28DC]/20">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl md:text-6xl font-bold font-display">Stop Managing Email. <br /><span className="text-gradient">Let AI Handle It.</span></h2>
-        </motion.div>
-      </div>
-    </section>
-  );
+  return null;
 }

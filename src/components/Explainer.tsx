@@ -69,11 +69,11 @@ export default function Explainer() {
   };
 
   return (
-    <section className="pt-2 pb-2 px-4 md:px-8 lg:px-12 bg-gradient-to-b from-black to-[#4C28DC]/10 border-t border-white/5 overflow-hidden">
+    <section className="pt-2 pb-2 px-4 md:px-8 lg:px-12 bg-gradient-to-b from-black to-[#8b5cf6]/10 border-t border-white/5 overflow-hidden">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-4 relative">
           <h2 className="text-2xl md:text-3xl font-bold font-display mb-2 tracking-tight">
-            See it in <span className="text-[#4C28DC]">action</span>
+            See it in <span className="text-[#8b5cf6]">action</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
             Experience the power of automated email orchestration through our live interactive walkthroughs.
@@ -84,7 +84,7 @@ export default function Explainer() {
           {/* Main Display Area */}
           <div className="lg:col-span-7 relative group">
             <div 
-              className="relative aspect-video rounded-2xl overflow-hidden glass-card border border-white/10 shadow-xl shadow-[#4C28DC]/15"
+              className="relative aspect-video rounded-2xl overflow-hidden glass-card border border-white/10 shadow-xl shadow-[#8b5cf6]/15"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
@@ -118,20 +118,20 @@ export default function Explainer() {
               {/* Navigation Arrows */}
               <button 
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 border border-white/10 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-[#4C28DC] z-10"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 border border-white/10 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-[#8b5cf6] z-10"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button 
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 border border-white/10 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-[#4C28DC] z-10"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/50 border border-white/10 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity hover:bg-[#8b5cf6] z-10"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
 
               {/* Active Indicator Pulse */}
               <div className="absolute top-6 left-6 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/40 backdrop-blur-md border border-white/10">
-                <div className="w-2 h-2 bg-[#4C28DC] rounded-full animate-pulse shadow-[0_0_8px_#4C28DC]"></div>
+                <div className="w-2 h-2 bg-[#8b5cf6] rounded-full animate-pulse shadow-[0_0_8px_#8b5cf6]"></div>
                 <span className="text-[10px] font-bold uppercase tracking-widest text-white/90">Live Demo</span>
               </div>
             </div>
@@ -145,25 +145,25 @@ export default function Explainer() {
                 onClick={() => handleTabClick(index)}
                 className={`w-full text-left p-3 rounded-lg transition-all relative group overflow-hidden ${
                   activeIndex === index 
-                    ? "bg-[#4C28DC]/10 border border-[#4C28DC]/30 ring-1 ring-[#4C28DC]/30" 
+                    ? "bg-[#8b5cf6]/10 border border-[#8b5cf6]/30 ring-1 ring-[#8b5cf6]/30" 
                     : "bg-transparent border border-white/5 hover:border-white/10"
                 }`}
               >
                 {/* Progress Bar Background */}
                 {activeIndex === index && (
-                  <div className="absolute bottom-0 left-0 h-1 bg-[#4C28DC]/20 w-full" />
+                  <div className="absolute bottom-0 left-0 h-1 bg-[#8b5cf6]/20 w-full" />
                 )}
                 {/* Active Progress Bar */}
                 {activeIndex === index && (
                   <motion.div 
-                    className="absolute bottom-0 left-0 h-1 bg-[#4C28DC] z-10"
+                    className="absolute bottom-0 left-0 h-1 bg-[#8b5cf6] z-10"
                     style={{ width: `${progress}%` }}
                   />
                 )}
 
                 <div className="flex items-start gap-4">
                   <div className={`mt-1 p-2 rounded-lg transition-colors ${
-                    activeIndex === index ? "bg-[#4C28DC] text-white" : "bg-white/5 text-gray-500"
+                    activeIndex === index ? "bg-[#8b5cf6] text-white" : "bg-white/5 text-gray-500"
                   }`}>
                     <CheckCircle2 className="w-4 h-4" />
                   </div>

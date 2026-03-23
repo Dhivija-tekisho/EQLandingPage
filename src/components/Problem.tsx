@@ -4,37 +4,37 @@ import { Inbox, Clock, AlertCircle } from 'lucide-react';
 
 const problems = [
   {
-    icon: <Inbox className="w-6 h-6 text-red-400" />,
-    title: "Too Many Emails",
-    description: "The average professional receives 121 emails per day. Most of it is noise that drains your cognitive energy."
+    title: "Noise takes over",
+    description: "Low-value messages crowd out email that still needs a response."
   },
   {
-    icon: <Clock className="w-6 h-6 text-orange-400" />,
-    title: "Slow Response Times",
-    description: "Manual drafting takes time. Delayed responses lead to missed opportunities and frustrated clients."
+    title: "Manual triage slows work",
+    description: "Time goes into sorting before action even begins."
   },
   {
-    icon: <AlertCircle className="w-6 h-6 text-yellow-400" />,
-    title: "Missed Important Messages",
-    description: "Critical action items get buried under newsletters and notifications. One missed email can cost thousands."
+    title: "Delayed replies lose momentum",
+    description: "Critical follow-ups cool down when inbox review takes too long."
   }
 ];
 
 export default function Problem() {
   return (
-    <section className="pt-16 pb-16 px-6 md:px-12 lg:px-24 bg-white/[0.02] animated-glow" style={{ '--glow-color': 'rgba(99, 102, 241, 0.15)' } as React.CSSProperties}>
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold font-display mb-6">
-            Email was built for a different era. <br />
-            <span className="text-gradient">EmailQ brings it into the AI era</span>
+    <section className="min-h-screen flex flex-col justify-center py-12 md:py-20 px-6 md:px-12 lg:px-24 bg-white/[0.02] animated-glow" style={{ '--glow-color': 'rgba(99, 102, 241, 0.15)' } as React.CSSProperties}>
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="text-center mb-10">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-sm font-bold tracking-widest mb-6 uppercase">
+            The inbox problem
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold font-display mb-6 max-w-4xl mx-auto leading-tight">
+            Important email rarely gets missed because it is unimportant. <br className="hidden lg:block"/>
+            <span className="text-gradient">It gets missed because everything arrives at once.</span>
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Traditional inboxes are passive lists of messages. EmailQ turns your inbox into an active orchestration engine.
+          <p className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+            EmailQ surfaces what needs action, reduces low-value noise, and helps users respond faster without losing control.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-4 lg:gap-6">
           {problems.map((problem, index) => (
             <motion.div
               key={index}
@@ -42,17 +42,23 @@ export default function Problem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="glass-card p-4 hover:bg-white/[0.1] transition-all duration-300 group border border-white/5 hover:border-[#6366f1]/30 flex gap-4 items-start"
+              className="relative p-6 lg:p-8 rounded-2xl flex flex-col items-center justify-center text-center transition-all duration-300 border border-white/10 bg-gradient-to-b from-white/[0.08] to-transparent backdrop-blur-xl hover:from-white/[0.12] hover:border-white/20 shadow-xl"
             >
-              <div className="w-10 h-10 rounded-lg bg-[#6366f1]/10 flex items-center justify-center border border-[#6366f1]/20 group-hover:scale-110 transition-transform flex-shrink-0">
-                {React.cloneElement(problem.icon as React.ReactElement, { className: "w-5 h-5" })}
-              </div>
-              <div>
-                <h3 className="text-lg font-bold mb-2 text-white">{problem.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{problem.description}</p>
-              </div>
+              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 text-white tracking-tight">{problem.title}</h3>
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed max-w-[220px]">{problem.description}</p>
             </motion.div>
           ))}
+        </div>
+
+        {/* Quote Section */}
+        <div className="mt-12 lg:mt-16 max-w-4xl border-l-[3px] border-white/10 pl-6 md:pl-8 py-2 relative">
+          <p className="text-xs md:text-sm font-bold tracking-widest text-[#8f90a6] uppercase mb-3">SOUND FAMILIAR?</p>
+          <blockquote className="text-lg md:text-xl lg:text-2xl font-light italic text-gray-300 leading-relaxed mb-4">
+            “I saw it. I meant to reply. Then three more threads arrived.”
+          </blockquote>
+          <p className="text-base md:text-lg text-[#8b5cf6] font-medium">
+            EmailQ makes the next response easier to see and easier to send.
+          </p>
         </div>
       </div>
     </section>

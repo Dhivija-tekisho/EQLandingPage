@@ -45,7 +45,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#000000]/90 backdrop-blur-lg border-b border-white/10 py-0' : 'bg-transparent py-3'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#000000]/90 backdrop-blur-lg py-0' : 'bg-transparent py-3'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img src={logo} alt="EmailQ Logo" className="h-15 w-auto object-contain" />
@@ -55,7 +55,7 @@ export default function Navbar() {
           <Link to="/" className="text-sm font-medium text-white/70 hover:text-white transition-colors">About</Link>
           <div className="relative features-dropdown flex items-center gap-1">
             <Link 
-              to="/features"
+              to="/#features"
               className="text-sm font-medium text-white/70 hover:text-white transition-colors"
             >
               Features
@@ -77,11 +77,11 @@ export default function Navbar() {
                   {features.map((feature, index) => (
                     <Link
                       key={index}
-                      to={`/features#${feature.slug}`}
+                      to={`/#${feature.slug}`}
                       onClick={() => setIsFeaturesDropdownOpen(false)}
                       className="px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-[#6366f1]/10 rounded-lg transition-all flex items-center gap-2 group"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#4C28DC]/40 group-hover:bg-[#4C28DC] transition-colors flex-shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#8b5cf6]/40 group-hover:bg-[#8b5cf6] transition-colors flex-shrink-0" />
                       {feature.label}
                     </Link>
                   ))}
@@ -89,14 +89,12 @@ export default function Navbar() {
               </motion.div>
             )}
           </div>
-          <Link to="/agents" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Agents</Link>
-          <Link to="/use-cases" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Use Cases</Link>
-          <Link to="/pricing" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Pricing</Link>
+          <Link to="/#agents" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Agents</Link>
+          <Link to="/#use-cases" className="text-sm font-medium text-white/70 hover:text-white transition-colors">Use Cases</Link>
         </div>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-4 mr-12">
           <button className="text-sm font-medium text-white/70 hover:text-white transition-colors">Sign In</button>
-          <button className="btn-primary py-2 text-sm">Get Started</button>
         </div>
 
         <button className="md:hidden text-white" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -112,11 +110,9 @@ export default function Navbar() {
           className="md:hidden absolute top-full left-0 right-0 bg-[#000000] border-b border-white/10 p-6 flex flex-col gap-6"
         >
           <Link to="/" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>About</Link>
-          <Link to="/features" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>Features</Link>
-          <Link to="/agents" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>Agents</Link>
-          <Link to="/use-cases" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>Use Cases</Link>
-          <Link to="/pricing" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>Pricing</Link>
-          <button className="btn-primary w-full">Get Started</button>
+          <Link to="/#features" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>Features</Link>
+          <Link to="/#agents" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>Agents</Link>
+          <Link to="/#use-cases" className="text-lg font-medium text-white/70" onClick={() => setIsMobileMenuOpen(false)}>Use Cases</Link>
         </motion.div>
       )}
     </nav>

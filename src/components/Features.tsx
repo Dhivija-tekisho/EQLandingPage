@@ -22,79 +22,79 @@ const allFeatures: Feature[] = [
     icon: <Inbox className="w-5 h-5" />,
     title: 'Smart Inbox',
     description: 'Surfaces the most critical emails first based on your historical behavior.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <Trash2 className="w-5 h-5" />,
     title: 'Auto Inbox Cleanup',
     description: 'Archive or delete irrelevant emails automatically with custom rule sets.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <FileText className="w-5 h-5" />,
     title: 'AI Draft Responses',
     description: 'Context-aware replies that sound like you — ready for one-click approval.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <Zap className="w-5 h-5" />,
     title: 'Quick Reply Suggestions',
     description: 'Instant short-reply options so you can respond to routine emails in seconds.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <UserCircle2 className="w-5 h-5" />,
     title: 'AI Communication Personas',
     description: 'Define distinct AI writing styles per team — warm support, precise legal.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <BrainCircuit className="w-5 h-5" />,
     title: 'AI Learning (Dynamic RAG)',
     description: 'Continuously improves using your feedback through a Dynamic RAG pipeline.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <Mic className="w-5 h-5" />,
     title: 'Voice Agent',
     description: 'An AI assistant that responds to your commands and provides information about the application.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <Mail className="w-5 h-5" />,
     title: 'Email Accounts',
     description: 'Full OAuth2 Gmail sync — labels, threads, and drafts without leaving EmailQ.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <Database className="w-5 h-5" />,
     title: 'Knowledge Base Integration',
     description: 'Ground every AI reply in your internal docs, FAQs, and company wikis.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <Terminal className="w-5 h-5" />,
     title: 'Custom System Prompt',
     description: 'Fine-tune AI behavior with natural language to match your brand voice.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <LayoutList className="w-5 h-5" />,
     title: 'Customize Departments/Categories',
     description: 'Build categories tailored to your structure — Finance to Customer Success.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <BarChart3 className="w-5 h-5" />,
     title: 'Email Analytics',
     description: 'Real-time dashboards on volume, response times, and team performance.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
   {
     icon: <BellRing className="w-5 h-5" />,
     title: 'SLA Breach Alerts',
     description: 'Instant alerts when critical emails are nearing or have breached deadlines.',
-    accent: '#4C28DC',
+    accent: '#8b5cf6',
   },
 ];
 
@@ -110,7 +110,7 @@ export default function Features() {
           el.scrollIntoView({ behavior: 'smooth', block: 'center' });
           el.style.transition = 'box-shadow 0.4s ease, border-color 0.4s ease';
           el.style.boxShadow = '0 0 0 2px rgba(76,40,220,0.7), 0 0 24px rgba(76,40,220,0.35)';
-          el.style.borderColor = '#4C28DC';
+          el.style.borderColor = '#8b5cf6';
           setTimeout(() => { 
             el.style.boxShadow = ''; 
             el.style.borderColor = '';
@@ -148,7 +148,7 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: fIdx * 0.05 }}
-              className="glass-card p-6 group hover:border-[#4C28DC]/50 transition-all duration-300 hover:-translate-y-1 scroll-mt-32"
+              className="relative p-6 rounded-2xl flex flex-col items-start transition-all duration-300 border border-white/10 bg-gradient-to-b from-white/[0.08] to-transparent backdrop-blur-xl hover:from-white/[0.12] hover:border-[#8b5cf6]/50 shadow-xl group hover:-translate-y-1 scroll-mt-32"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div 
@@ -160,7 +160,7 @@ export default function Features() {
                     className: "w-5 h-5"
                   })}
                 </div>
-                <h4 className="text-lg font-bold group-hover:text-[#4C28DC] transition-colors">
+                <h4 className="text-lg font-bold group-hover:text-[#8b5cf6] transition-colors">
                   {feature.title}
                 </h4>
               </div>

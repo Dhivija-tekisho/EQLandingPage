@@ -35,7 +35,7 @@ export default function Workflow() {
         {/* ── Workflow Steps ── */}
         <div className="relative mb-10">
           {/* Connector Line */}
-          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-[#4C28DC]/0 via-[#4C28DC]/20 to-[#4C28DC]/0 -translate-y-1/2 hidden lg:block"></div>
+          <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-[#8b5cf6]/0 via-[#8b5cf6]/20 to-[#8b5cf6]/0 -translate-y-1/2 hidden lg:block"></div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 relative z-10">
             {steps.map((step, index) => (
@@ -47,10 +47,10 @@ export default function Workflow() {
                 transition={{ delay: index * 0.1 }}
                 className="flex flex-col items-center text-center group"
               >
-                <div className="w-16 h-16 rounded-2xl glass-card flex items-center justify-center mb-6 group-hover:bg-[#4C28DC] group-hover:scale-110 transition-all duration-300">
-                  {React.cloneElement(step.icon as React.ReactElement, { className: "w-8 h-8 text-[#4C28DC] group-hover:text-white transition-colors" })}
+                <div className="w-16 h-16 rounded-2xl glass-card flex items-center justify-center mb-6 group-hover:bg-[#8b5cf6] group-hover:scale-110 transition-all duration-300">
+                  {React.cloneElement(step.icon as React.ReactElement, { className: "w-8 h-8 text-[#8b5cf6] group-hover:text-white transition-colors" })}
                 </div>
-                <div className="text-xs font-bold text-[#4C28DC] uppercase tracking-widest mb-2">Step {index + 1}</div>
+                <div className="text-xs font-bold text-[#8b5cf6] uppercase tracking-widest mb-2">Step {index + 1}</div>
                 <h3 className="font-bold mb-1">{step.label}</h3>
                 <p className="text-xs text-white/40">{step.desc}</p>
               </motion.div>

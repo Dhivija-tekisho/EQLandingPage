@@ -6,7 +6,6 @@ import {
   CheckCircle2, Mail, Layers, BarChart3,
   BookOpen, Bell, Clock, Star, Shield, Zap
 } from 'lucide-react';
-import CTA from '../components/CTA';
 
 /* ─── Data ─────────────────────────────────────────────────────────── */
 
@@ -249,16 +248,16 @@ export default function UseCasesPage() {
 
   const cases = tab === 'org' ? orgUseCases : individualUseCases;
   const steps = tab === 'org' ? orgSteps : individualSteps;
-  const accentColor = '#4C28DC';
+  const accentColor = '#8b5cf6';
 
   return (
-    <div className="pt-20">
+    <div id="use-cases" className="pt-0">
       {/* ── Hero ── */}
       <section className="relative section-padding pb-0 pt-0 overflow-hidden">
         {/* Ambient glows */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-[-10%] left-[25%] w-[40%] h-[40%] bg-[#4C28DC]/10 blur-[140px] rounded-full" />
-          <div className="absolute top-[20%] right-[10%] w-[25%] h-[30%] bg-[#4C28DC]/10 blur-[120px] rounded-full" />
+          <div className="absolute top-[-10%] left-[25%] w-[40%] h-[40%] bg-[#8b5cf6]/10 blur-[140px] rounded-full" />
+          <div className="absolute top-[20%] right-[10%] w-[25%] h-[30%] bg-[#8b5cf6]/10 blur-[120px] rounded-full" />
         </div>
 
         <div className="max-w-3xl mx-auto relative z-8">
@@ -267,9 +266,9 @@ export default function UseCasesPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-4"
           >
-            <h1 className="text-4xl md:text-6xl font-bold font-display mb-6">
+            <h2 className="text-4xl md:text-6xl font-bold font-display mb-6">
               Built for <span className="text-gradient">every inbox</span>
-            </h1>
+            </h2>
             <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
               From enterprise support teams to busy parents — EmailQ adapts to your world and handles your email so you don't have to.
             </p>
@@ -287,7 +286,7 @@ export default function UseCasesPage() {
                   onClick={() => setTab(key)}
                   className={`flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${
                     tab === key
-                      ? 'bg-[#4C28DC] text-white shadow-lg shadow-[#4C28DC]/30'
+                      ? 'bg-[#8b5cf6] text-white shadow-lg shadow-[#8b5cf6]/30'
                       : 'text-gray-400 hover:text-white hover:bg-white/5'
                   }`}
                 >
@@ -314,8 +313,8 @@ export default function UseCasesPage() {
               {/* Section label */}
               <div className="flex items-center gap-3 mb-8">
                 {tab === 'org'
-                  ? <Building2 className="w-5 h-5 text-[#4C28DC]" />
-                  : <User className="w-5 h-5 text-[#4C28DC]" />}
+                  ? <Building2 className="w-5 h-5 text-[#8b5cf6]" />
+                  : <User className="w-5 h-5 text-[#8b5cf6]" />}
                 <h2 className="text-2xl font-bold font-display">
                   {tab === 'org' ? 'Organisation Use Cases' : 'Individual Use Cases'}
                 </h2>
@@ -337,45 +336,6 @@ export default function UseCasesPage() {
         </div>
       </section>
 
-      {/* ── Getting Started ── */}
-      <section className="section-padding bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-5"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
-              Getting <span className="text-gradient">Started</span>
-            </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              {tab === 'org'
-                ? 'Set up your team workspace in under 15 minutes.'
-                : 'Up and running in under 5 minutes — no technical setup required.'}
-            </p>
-          </motion.div>
-
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`steps-${tab}`}
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="max-w-2xl mx-auto"
-            >
-              {steps.map((step, idx) => (
-                <StepItem key={step.step} item={step} idx={idx} color={accentColor} />
-              ))}
-            </motion.div>
-          </AnimatePresence>
-
-
-        </div>
-      </section>
-
-      <CTA />
     </div>
   );
 }
